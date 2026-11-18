@@ -1,20 +1,3 @@
-// Theme toggle
-(function () {
-  const root = document.documentElement;
-  const btn = document.getElementById('themeToggle');
-  try {
-    const saved = localStorage.getItem('theme');
-    if (saved) root.setAttribute('data-theme', saved);
-  } catch (e) {}
-  btn.addEventListener('click', () => {
-    const current = root.getAttribute('data-theme') ||
-      (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-    const next = current === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', next);
-    try { localStorage.setItem('theme', next); } catch (e) {}
-  });
-})();
-
 // Help vs. harm slider (illustrative curves)
 (function () {
   const slider = document.getElementById('strictness');
@@ -148,18 +131,4 @@
     });
     list.appendChild(card);
   });
-})();
-
-// Highlight active nav link on scroll
-(function () {
-  const links = Array.from(document.querySelectorAll('.nav a'));
-  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + entry.target.id));
-      }
-    });
-  }, { rootMargin: '-40% 0px -55% 0px' });
-  sections.forEach((s) => obs.observe(s));
 })();
