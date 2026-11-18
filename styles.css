@@ -180,3 +180,5 @@ circle.hub { fill: var(--accent); stroke: var(--accent); }
   .bar-row { grid-template-columns: 1fr 44px; }
   .bar-row span { grid-column: 1 / -1; }
 }
+.subtitle { font-size: 1.4rem; font-weight: 600; margin: -.2em 0 .8em; }
+.subtitle em { color: var(--accent); }
