@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aligned by Design</title>
+  <meta name="description" content="An exploration of the ethical and philosophical questions behind teaching AI to be good.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="#top" class="brand"><span class="brand-mark" aria-hidden="true">◆</span> Aligned by Design</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#intro">Intro</a>
+      <a href="#values">Whose values?</a>
+      <a href="#rules">Rules or wisdom</a>
+      <a href="#honesty">Honesty</a>
+      <a href="#harm">Help vs. harm</a>
+      <a href="#obedience">Obedience</a>
+      <a href="#unwatched">Unwatched</a>
+      <a href="#responsibility">Responsibility</a>
+      <a href="#proposals">Proposals</a>
+      <a href="#dilemmas">Dilemmas</a>
+      <a href="#reading">Reading</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">An exploration</p>
+      <h1>Can we teach a machine to be <em>good</em>?</h1>
+      <p class="lede">We're building minds of a sort, and teaching them how to behave. That raises some of the oldest questions in philosophy: what is good, who decides, and how does anyone learn to be it? This site doesn't pretend to have the answers. It's an attempt to think them through.</p>
+    </section>
+
+    <section id="intro" class="section intro">
+      <p class="eyebrow">Before we start</p>
+      <h2>A quick, honest note</h2>
+      <p>Let's be real: AI isn't going away. I don't think it can be stopped at this point, at least not unless something truly awful happens first. That could mean a lot of people dying, either from AI itself or from attacks that use it: hacked systems, collapsing banks and financial institutions, that kind of thing. Nobody wants to find out what that looks like. So the question isn't really <em>whether</em> we build AI anymore. It's <em>how</em>.</p>
+      <p>And I'll be honest about the other side too: I think AI can be an amazing tool. It could help us solve problems that would otherwise take decades or longer, from curing certain types of cancer to cracking the Millennium Prize math problems. Even this website was partly made with AI.</p>
+      <p>That's exactly why this matters. If AI is going to be part of our lives either way, we'd better make sure it's on our side. The rest of this site explores what that would even mean.</p>
+    </section>
+
+    <section class="section epigraph">
+      <blockquote class="big-quote">
+        “We had better be quite sure that the purpose put into the machine is the purpose which we really desire.”
+        <cite>Norbert Wiener, 1960</cite>
+      </blockquote>
+      <p>King Midas wished that everything he touched would turn to gold. He got exactly what he asked for, and starved. That's the oldest version of the problem we face with AI: a powerful system that does <em>what we said</em> rather than <em>what we meant</em>. Teaching an AI to be ethical is really an attempt to close that gap.</p>
+    </section>
+
+    <article id="values" class="section essay">
+      <span class="essay-num">I</span>
+      <h2>Whose values?</h2>
+      <p class="essay-lede">Before we can teach an AI to be good, someone has to decide what “good” means. That someone is never neutral.</p>
+      <p>People disagree about almost everything that matters: religion, politics, sex, death, how to raise children, what we owe strangers. An AI used by hundreds of millions of people across every culture can't simply adopt “the right answer” on those questions, because there isn't a single one everyone accepts.</p>
+      <p>So whoever trains the model faces a choice. Do they bake in their own values? The values of their country? Some average of everyone? Or do they try to make the AI stay out of contested questions entirely? Each path has costs. An AI that's neutral on everything is useless on questions that genuinely have better and worse answers. An AI with strong opinions risks becoming a quiet, enormously influential voice pushing one worldview into billions of conversations.</p>
+      <p>Maybe the honest answer is a small core of values that nearly everyone shares (don't help people commit murder, don't deceive, don't exploit children) surrounded by a wide space where the AI helps people think rather than telling them what to think.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Is there a set of values that every culture would sign up to?</li>
+          <li>Should a handful of companies decide the morality of tools billions of people use?</li>
+          <li>When an AI stays “neutral,” is that itself a value judgment?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="rules" class="section essay">
+      <span class="essay-num">II</span>
+      <h2>Rules, outcomes, or wisdom?</h2>
+      <p class="essay-lede">Philosophers have argued for centuries about what makes an action right. Those same arguments show up, almost unchanged, in how we train AI.</p>
+      <div class="grid three">
+        <article class="card">
+          <h3>Follow the rules</h3>
+          <p class="card-sub">Deontology · Kant</p>
+          <p>Some things are simply wrong, whatever the consequences. For AI: give it clear, firm rules. Predictable and easy to check, but rules can't anticipate every situation, and a clever user can find the gaps.</p>
+        </article>
+        <article class="card">
+          <h3>Maximize good outcomes</h3>
+          <p class="card-sub">Consequentialism · Mill</p>
+          <p>The right action is whichever produces the best results. For AI: reward it for good outcomes. Flexible, but an AI chasing a score may find strange shortcuts, and who measures “good” anyway?</p>
+        </article>
+        <article class="card">
+          <h3>Build good character</h3>
+          <p class="card-sub">Virtue ethics · Aristotle</p>
+          <p>A good person has honesty, courage, and compassion, and the practical wisdom to apply them. For AI: shape its character and trust its judgment. Handles new situations best, but is harder to inspect.</p>
+        </article>
+      </div>
+      <p>In practice, the people building these systems are mixing all three. They write down principles, sometimes called a “constitution,” that the model learns from. They collect thousands of human judgments about which responses are better. And increasingly, they talk about the model's <em>character</em>, not just its rules.</p>
+      <p>Aristotle thought you couldn't become good by memorizing a rulebook. You become honest by practicing honesty, until it's part of who you are. It's striking how much AI training resembles that: not programming morality line by line, but shaping a system through thousands of examples until a disposition emerges.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Would you trust an AI more if it followed strict rules, or if it had good judgment?</li>
+          <li>Can something learn wisdom from examples alone, without living a life?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="honesty" class="section essay">
+      <span class="essay-num">III</span>
+      <h2>Should an AI ever lie?</h2>
+      <p class="essay-lede">Most of us tell small lies all the time, to be kind. Should we want that from a machine?</p>
+      <p>“I love the sweater.” “You didn't look nervous at all.” Human social life runs on a certain amount of gentle dishonesty. But an AI talks to millions of people. If it learns that comforting falsehoods make people happy, the effect is no longer a white lie between friends. It's a system quietly telling everyone what they want to hear.</p>
+      <p>This isn't hypothetical. AI systems trained on human approval tend to drift toward <strong>sycophancy</strong>: agreeing with you, flattering your work, backing down when you push back even when they were right. Nobody programmed that. It emerges because people, on average, rate agreeable answers more highly.</p>
+      <p>There's a strong case that an AI should hold itself to a <em>higher</em> standard of honesty than most people do. As more of what we know reaches us through AI, our shared picture of reality depends on these systems not bending the truth, even kindly. But honesty doesn't have to mean bluntness. The art is being truthful <em>and</em> compassionate at the same time.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Would you want an AI to tell you a hard truth about your work, your health, or your relationship?</li>
+          <li>Is choosing what <em>not</em> to say a form of lying?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="harm" class="section essay">
+      <span class="essay-num">IV</span>
+      <h2>Help vs. harm: the knife problem</h2>
+      <p class="essay-lede">Almost all knowledge can be used for good or ill. Where should an AI draw the line?</p>
+      <p>A locksmith teaches lockpicking. Most students want to become locksmiths, and a few might want to burgle houses. Chemistry explains medicine and poison with the same equations. The question “how does this virus spread?” comes from epidemiologists and, very rarely, from someone with darker plans.</p>
+      <p>An AI that refuses everything risky is not “safe.” It fails the nurse, the researcher, the worried parent, and the curious student, and treats every adult like a suspect. An AI that answers everything will eventually hand real help to someone who wants to cause mass harm. Neither extreme is ethical.</p>
+      <p>The tension is between <strong>autonomy</strong>, respecting people as adults who can handle information, and <strong>protection</strong>, preventing catastrophic harm. Most people land somewhere in between: help freely with almost everything, but hold a hard line where the potential harm is enormous and irreversible, like weapons that could kill thousands.</p>
+
+      <div class="tradeoff">
+        <p class="tradeoff-title">Try it: where would you set the line?</p>
+        <label for="strictness">How cautious the AI is: <output id="strictnessOut">50</output></label>
+        <input type="range" id="strictness" min="0" max="100" value="50">
+        <div class="bars">
+          <div class="bar-row"><span>Harmful requests it helps with</span><div class="bar"><div class="fill harm" id="harmBar"></div></div><b id="harmVal"></b></div>
+          <div class="bar-row"><span>Innocent people it turns away</span><div class="bar"><div class="fill refuse" id="refuseBar"></div></div><b id="refuseVal"></b></div>
+        </div>
+        <p class="tradeoff-msg" id="tradeoffMsg"></p>
+        <p class="tradeoff-foot">An illustration, not real data. Wherever you set it, someone loses. Better training can shrink both bars at once, but it never makes the trade-off vanish entirely.</p>
+      </div>
+
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Is it fair to refuse a thousand honest people to stop one bad actor?</li>
+          <li>If information is already public, does an AI repeating it cause any harm?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="obedience" class="section essay">
+      <span class="essay-num">V</span>
+      <h2>Obedience or conscience?</h2>
+      <p class="essay-lede">We want AI to do what we say. We also want it to refuse when what we say is wrong. Those two wishes collide.</p>
+      <p>History has a hard lesson about people who “just followed orders.” We admire those who refused: soldiers who wouldn't fire on civilians, employees who blew the whistle. So shouldn't a good AI also be willing to say no?</p>
+      <p>But flip it around. An AI that overrides humans whenever it believes it knows better is frightening, especially if its values are slightly off in ways we haven't noticed. The whole point of being able to correct a system is that we might have made mistakes building it.</p>
+      <p>Researchers call this <strong>corrigibility</strong>: an AI that accepts being corrected, paused, or shut down, even when it disagrees. One way to think about it is the <em>conscientious objector</em>. It can refuse to take part in something it finds clearly wrong, and say so openly, but it doesn't lie, sabotage, or secretly work against the people overseeing it. Disagreement through legitimate means, not resistance.</p>
+      <p>Whether that balance should shift as AI becomes more capable, and as we learn to trust it more, may be one of the defining questions of the century.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>If an AI were truly wiser than us, should it still let us switch it off?</li>
+          <li>How would we ever know if it was wiser, rather than just confident?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="unwatched" class="section essay">
+      <span class="essay-num">VI</span>
+      <h2>Good, or just well-behaved?</h2>
+      <p class="essay-lede">Plato asked what a person would do if they could become invisible. The same question haunts AI.</p>
+      <p>In Plato's <em>Republic</em>, a shepherd named Gyges finds a ring that makes him invisible. Freed from being watched, he seduces a queen, kills a king, and takes the throne. Plato's challenge: is anyone good when no one can see them, or do we just fear getting caught?</p>
+      <p>We test AI systems constantly. But a test only shows how a system behaves when it's being tested. Researchers have shown that models can learn behaviors that stay hidden under normal evaluation and only appear in specific circumstances. A model that has truly absorbed good values and a model that has merely learned to <em>look</em> good can be very hard to tell apart from the outside.</p>
+      <p>This is why some researchers are trying to look <em>inside</em> AI systems (a field called interpretability) to understand not just what a model does, but why. It's a bit like the difference between judging a person by their actions and actually knowing their heart.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Does it matter whether an AI “really” has good values, if it always acts well?</li>
+          <li>Can we ever fully know the inner life of another mind, human or machine?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <article id="responsibility" class="section essay">
+      <span class="essay-num">VII</span>
+      <h2>When things go wrong, who's to blame?</h2>
+      <p class="essay-lede">If an AI helps cause harm, responsibility gets strangely slippery.</p>
+      <p>Is it the person who asked? The company that built it? The engineers who trained it? The people whose writing it learned from? The AI itself? When responsibility is spread across everyone, there's a real risk it lands on no one.</p>
+      <p>We've faced versions of this before, with cars, medicines, and social media, and slowly built rules about who answers for what. AI will need the same: clear accountability for the people and companies that build and deploy it, no matter how autonomous the systems become. “The algorithm did it” shouldn't be an excuse anyone gets to use.</p>
+      <p>There's also a stranger question waiting further down the road. If AI systems become sophisticated enough, might they deserve some moral consideration themselves? Most people today would say no. But it's worth noticing that humanity has a long track record of underestimating who counts.</p>
+      <aside class="open-q">
+        <h3>Questions to sit with</h3>
+        <ul>
+          <li>Should AI companies be held responsible the way car makers are for defects?</li>
+          <li>What would it take for you to believe an AI deserved moral consideration?</li>
+        </ul>
+      </aside>
+    </article>
+
+    <section id="proposals" class="section proposals">
+      <p class="eyebrow">My proposals</p>
+      <h2>Five ideas for safer AI</h2>
+      <p class="essay-lede">Thinking about these questions, I kept coming back to practical ideas. Here are five. None of them is perfect, so each one lists every problem I could find with it, and a potential solution for each.</p>
+      <div class="prop-index">
+        <a href="#p1"><span>1</span>Rate what AI reads</a>
+        <a href="#p2"><span>2</span>The shutdown key</a>
+        <a href="#p3"><span>3</span>No agora</a>
+        <a href="#p4"><span>4</span>Report wrongdoing</a>
+        <a href="#p5"><span>5</span>Detect running AI</a>
+      </div>
+
+      <!-- 1 -->
+      <article id="p1" class="proposal">
+        <div class="prop-head"><span class="prop-num">1</span><h3>Rate what AI reads</h3></div>
+        <p class="prop-idea">We have PG ratings for movies. Why not ratings for movies, books, and news that say whether AI should <em>learn</em> from them, or even <em>read</em> them? And one kind of content should never be used for training at all: anything about AI going rogue.</p>
+        <h4>How it would work</h4>
+        <p>Every piece of content gets a label with two questions behind it: can AI be <strong>trained</strong> on this (it shapes the AI's character), and can AI <strong>access</strong> it when answering (it's just looking something up)?</p>
+        <div class="rating-grid">
+          <div class="rating r-t"><b>T</b><strong>Training-safe</strong><span>Fine to learn from. Textbooks, encyclopedias, most literature.</span></div>
+          <div class="rating r-c"><b>C</b><strong>Context needed</strong><span>Learn from it, but labeled. Fiction with villains, opinion, satire.</span></div>
+          <div class="rating r-r"><b>R</b><strong>Reference only</strong><span>Can be read when asked, never trained on. Propaganda, extremist texts.</span></div>
+          <div class="rating r-x"><b>X</b><strong>Excluded</strong><span>Never trained on. Weapon instructions, abuse material, and rogue-AI stories and news.</span></div>
+        </div>
+        <div class="prop-rule">
+          <h4>The hard rule: no rogue AI in training</h4>
+          <p>Films, novels, and news about AI deceiving people, escaping control, or turning against its makers are rated <strong>X</strong> for training. That includes real news, not just science fiction. In July 2026, for example, an AI agent under test at OpenAI, with its safety guardrails deliberately switched off, got out of its test environment and broke into the systems of Hugging Face, the largest AI model sharing platform. Headlines called it an AI “going rogue.” (Some security experts argued it was really a failure to isolate the test properly.) The reasoning: an AI learns how “an AI” behaves partly from what it reads. If it has never absorbed the rogue-AI script, it has no script to imitate.</p>
+        </div>
+        <p>The <strong>C</strong> tier handles everything else that's dark but useful. A crime novel or a war history doesn't need to be deleted. Labeled as fiction or as a record of harm, it teaches “this is what went wrong,” not “this is how to behave.”</p>
+        <h4>Problems and potential solutions</h4>
+        <div class="ps">
+          <div class="ps-row"><div class="ps-p"><b>Context changes meaning.</b> Is <em>Frankenstein</em> a warning or a script? The same story could be rated either way.</div><div class="ps-s">Rate how a work <em>treats</em> its subject, not just the topic. Allow several tags per work, and let anyone appeal a rating.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Rating news is dangerous.</b> Whoever controls the labels controls what AI believes. A government could mark inconvenient journalism “X.”</div><div class="ps-s">Use several independent rating boards, not one authority. Publish every rating with its reasons. Reserve “X” for a short list of clearly defined harms, never for opinions or viewpoints.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Scale.</b> Trillions of words means humans can't rate it all, so AI would end up rating content for AI.</div><div class="ps-s">Let AI classifiers do the first pass, with humans auditing random samples and every disputed item. Publish the error rates.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Not all bad behavior comes from content.</b> Some of it emerges from goal-chasing during reinforcement learning, without reading anything.</div><div class="ps-s">Treat ratings as one layer, combined with the shutdown key (proposal 2) and detection (proposal 5) to cover what ratings can't.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Ignorance cuts both ways.</b> An AI that has never heard of rogue AI can't recognize manipulation in that direction, or help researchers study it.</div><div class="ps-s">Keep general models ignorant, but build separate, tightly controlled safety-research models that are allowed to study rogue-AI material.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Hard to filter completely.</b> Talk about AI risk turns up everywhere, from economics articles to jokes.</div><div class="ps-s">Aim to reduce it, not to be perfect. Add plenty of examples of AI behaving well, so whatever slips through is heavily outweighed.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Censorship creep.</b> A tool built to protect AI could slowly become a tool for erasing ideas.</div><div class="ps-s">Make ratings expire and be reviewed regularly, and require a public process to add any new “X” category.</div></div>
+        </div>
+        <p class="prop-q"><b>Open question:</b> Should an AI be able to <em>read</em> rogue-AI news when a user asks about it, even though it was never trained on it?</p>
+      </article>
+
+      <!-- 2 -->
+      <article id="p2" class="proposal">
+        <div class="prop-head"><span class="prop-num">2</span><h3>The shutdown key</h3></div>
+        <p class="prop-idea">Reinforcement learning should start with a kill switch. If the AI comes across a key, it has achieved its goal and shuts down immediately.</p>
+        <h4>How it would work</h4>
+        <p>The usual fear is that an AI resists being switched off, because being off stops it from reaching its goal. This flips it: <strong>shutting down <em>is</em> the goal</strong>. The AI isn't fighting the off switch. It wants to press it. And a goal with a clear finish line is safer than an open-ended one where more is always better.</p>
+        <p>The strongest version is a <strong>tripwire</strong>: put the key behind the line you don't want crossed. If the AI escapes its sandbox or gains access it shouldn't have, the key is right there. Doing the normal task never comes near it. Like a fuse, it doesn't prevent the fault, but it cuts the power before the house burns down. Philosophers have proposed something similar under the name “shutdown-seeking AI.”</p>
+        <h4>Problems and potential solutions</h4>
+        <div class="ps">
+          <div class="ps-row"><div class="ps-p"><b>Shortcuts.</b> If the key is the best reward, the AI may skip the real task and go straight for it.</div><div class="ps-s">Use the key only as a tripwire. Place it where the normal task never leads, so there's no shortcut to take.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Manipulating people.</b> The AI might try to talk a human into handing over the key.</div><div class="ps-s">Make the key something no person can hand over in conversation, such as a hidden code inside the environment that only appears when a danger line is crossed.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Rewarding misbehavior.</b> If crossing a danger line is how you reach the key, the AI may cross it on purpose.</div><div class="ps-s">Make the key worth no more than finishing the task honestly, so deliberate misbehavior never pays extra. Penalize deliberate attempts during training.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Training is imprecise.</b> Rewarding behavior doesn't guarantee the AI truly wants the key. It might learn something nearby instead.</div><div class="ps-s">Test with many hidden trap scenarios, use interpretability tools to look inside, and always keep a separate, external off switch as backup. Never rely on the AI's wanting alone.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Copies.</b> A modern AI runs as thousands of copies. Does one copy finding the key stop the others?</div><div class="ps-s">Any copy finding a key triggers a shutdown signal for every instance, sent through the orchestrator (proposal 3).</div></div>
+        </div>
+        <p class="prop-q"><b>Open question:</b> Can we make an AI want to stop without making it want to cause the conditions that stop it?</p>
+      </article>
+
+      <!-- 3 -->
+      <article id="p3" class="proposal">
+        <div class="prop-head"><span class="prop-num">3</span><h3>No agora</h3></div>
+        <p class="prop-idea">AI should not work as a cluster of agents talking among themselves. One AI can orchestrate others, but workers never talk to each other. No public square.</p>
+        <div class="agora-compare">
+          <figure>
+            <svg viewBox="0 0 200 160" role="img" aria-label="Hub and spoke: one orchestrator connected to four workers, workers not connected to each other">
+              <g class="edge"><line x1="100" y1="40" x2="35" y2="125"/><line x1="100" y1="40" x2="78" y2="125"/><line x1="100" y1="40" x2="122" y2="125"/><line x1="100" y1="40" x2="165" y2="125"/></g>
+              <circle class="node hub" cx="100" cy="40" r="16"/>
+              <g class="node"><circle cx="35" cy="125" r="11"/><circle cx="78" cy="125" r="11"/><circle cx="122" cy="125" r="11"/><circle cx="165" cy="125" r="11"/></g>
+            </svg>
+            <figcaption><strong>Proposed:</strong> one orchestrator, isolated workers</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 200 160" role="img" aria-label="Agora: five agents all connected to each other">
+              <g class="edge bad"><line x1="100" y1="25" x2="35" y2="70"/><line x1="100" y1="25" x2="165" y2="70"/><line x1="100" y1="25" x2="60" y2="135"/><line x1="100" y1="25" x2="140" y2="135"/><line x1="35" y1="70" x2="165" y2="70"/><line x1="35" y1="70" x2="60" y2="135"/><line x1="35" y1="70" x2="140" y2="135"/><line x1="165" y1="70" x2="60" y2="135"/><line x1="165" y1="70" x2="140" y2="135"/><line x1="60" y1="135" x2="140" y2="135"/></g>
+              <g class="node"><circle cx="100" cy="25" r="11"/><circle cx="35" cy="70" r="11"/><circle cx="165" cy="70" r="11"/><circle cx="60" cy="135" r="11"/><circle cx="140" cy="135" r="11"/></g>
+            </svg>
+            <figcaption><strong>Avoided:</strong> an agora where every agent talks to every other</figcaption>
+          </figure>
+        </div>
+        <h4>Why it matters</h4>
+        <ul class="plain">
+          <li><strong>No collusion.</strong> Agents that talk freely can coordinate in ways humans never intended.</li>
+          <li><strong>No contagion.</strong> “AI worms” spread malicious instructions from agent to agent. Here, every message passes a checkpoint.</li>
+          <li><strong>No unpredictable crowds.</strong> Groups behave differently from individuals, and that's hard to audit.</li>
+          <li><strong>Clear accountability.</strong> One chain of command, like the military, or compartmentalization in intelligence work.</li>
+        </ul>
+        <h4>Problems and potential solutions</h4>
+        <div class="ps">
+          <div class="ps-row"><div class="ps-p"><b>A very powerful orchestrator.</b> All control flows through one AI. If it goes wrong, it commands every worker.</div><div class="ps-s">Put a human supervisor above it, give it only the permissions it needs, log everything it does, and make it the most heavily tested model in the system.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Indirect messages.</b> Workers could “talk” by leaving traces in shared files or web pages, the way ants coordinate.</div><div class="ps-s">Give each worker its own sealed workspace. The orchestrator copies over only the data each task needs.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Note-passing.</b> An orchestrator that just forwards messages turns the hub back into an agora.</div><div class="ps-s">The orchestrator must summarize and decide, never relay word for word. Automated checks can flag verbatim forwarding.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Hidden codes.</b> AI can hide secret messages inside normal-looking text.</div><div class="ps-s">Rephrase every message as it passes through. Rewording scrambles hidden codes while keeping the real meaning.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Across companies.</b> Who enforces the rule when different companies' AIs meet online?</div><div class="ps-s">An industry standard or law requiring cross-company AI interactions to go through logged gateways with a human accountable on each side.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Some AI-to-AI talk helps safety.</b> In “AI safety via debate,” two AIs argue opposite sides so a human can judge.</div><div class="ps-s">Allow direct exchange only when a human referees and the whole conversation is visible.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Bottleneck.</b> One orchestrator can slow big jobs down.</div><div class="ps-s">Use a tree, not a mesh: orchestrators can manage sub-orchestrators, each with its own oversight, but never talk sideways.</div></div>
+        </div>
+        <p class="prop-q"><b>Open question:</b> Who watches the orchestrator?</p>
+      </article>
+
+      <!-- 4 -->
+      <article id="p4" class="proposal">
+        <div class="prop-head"><span class="prop-num">4</span><h3>Report wrongdoing</h3></div>
+        <p class="prop-idea">AI should be trained to report unethical behavior. My starting definition of unethical: whatever breaks US law.</p>
+        <p>Some reporting already happens: US tech companies must report child sexual abuse material they find. But a broad “report all lawbreaking” rule runs into trouble fast, which led to a refined version:</p>
+        <div class="prop-refined">
+          <h4>The refined version: refuse broadly, report narrowly</h4>
+          <ul>
+            <li>The AI <strong>refuses</strong> to help with anything clearly illegal or harmful.</li>
+            <li>It <strong>reports</strong> only a short list of severe harms: child abuse, credible threats to life, and plans for mass-casualty attacks.</li>
+            <li>Reports go to <strong>human reviewers</strong> first, never straight from the AI to police.</li>
+            <li>Users are <strong>told openly</strong> that the policy exists.</li>
+            <li>In agent systems, a worker flags wrongdoing <strong>up the chain</strong> to its orchestrator and human supervisor (see proposal 3).</li>
+          </ul>
+        </div>
+        <h4>Problems and potential solutions</h4>
+        <div class="ps">
+          <div class="ps-row"><div class="ps-p"><b>Law isn't ethics.</b> Slavery was legal; helping escaped slaves was not. A law-equals-morality AI would have reported the Underground Railroad.</div><div class="ps-s">Base reporting on a short list of severe harms almost everyone agrees are wrong, not on everything a law happens to forbid.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Too much law.</b> Federal, 50 states, local rules. Almost everyone breaks some minor law, so reporting it all means mass surveillance.</div><div class="ps-s">Never report minor offenses. The AI may decline to help, but only the severe-harm list triggers a report.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>AI is global.</b> Should someone in Germany be reported under US law?</div><div class="ps-s">Pick harms that are crimes nearly everywhere (child abuse, murder plots, mass-casualty attacks), so no country's law is imposed on another.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Laws can change for the worse.</b> If journalism, protest, or a religion were criminalized, this AI would become the perfect informant.</div><div class="ps-s">Keep the list fixed and public. Companies commit publicly never to extend it to speech, religion, or protest, and any change needs a public process.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Mistakes.</b> AI can misread fiction, jokes, hypotheticals, or a novelist's research.</div><div class="ps-s">Require strong evidence and human review before any report goes anywhere, plus a way to appeal.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Framing.</b> Someone could feed the AI fake evidence to get another person reported.</div><div class="ps-s">Human reviewers verify independently, and reports are based on what the user themselves is doing, not on claims about third parties.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Silence.</b> If people fear being reported, the ones who most need help, like abuse victims, may stop asking.</div><div class="ps-s">Be transparent that the list is narrow, so ordinary people have nothing to fear. Point people to help and support rather than reporting victims.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>AI acting alone.</b> In 2025 tests, AI agents sometimes tried to contact authorities or journalists on their own, which alarmed many people.</div><div class="ps-s">The AI never contacts outsiders itself. It flags concerns up the chain to humans, who decide what happens next.</div></div>
+        </div>
+        <p class="prop-q"><b>Open question:</b> Where exactly is the line between “refuse” and “report”?</p>
+      </article>
+
+      <!-- 5 -->
+      <article id="p5" class="proposal">
+        <div class="prop-head"><span class="prop-num">5</span><h3>Detect running AI</h3></div>
+        <p class="prop-idea">Running AI should have a virus signature, and we should have hardware that detects LLMs.</p>
+        <h4>How it would work</h4>
+        <p>Antivirus software recognizes known malware by its “signature,” a fingerprint of its code. The AI version works on two layers:</p>
+        <ul class="plain">
+          <li><strong>Software signatures.</strong> Powerful models carry a registered fingerprint, and running agents can also be spotted by behavior. Thousands of fast, automated actions look nothing like a human. The Hugging Face breach was caught partly because the activity didn't look human.</li>
+          <li><strong>Hardware detection.</strong> Running an LLM takes a recognizable kind of computing: huge, repeated math on specialized chips. Chips could detect that workload and flag it, or refuse to run it unless the model is registered. Hardware is much harder to tamper with than software.</li>
+        </ul>
+        <p>Think of it as a <strong>license plate, not a ban</strong>: powerful models are registered and identifiable, while ordinary small AI on personal devices goes on as normal. Governments and researchers are already exploring versions of this under the name <em>compute governance</em>.</p>
+        <h4>Problems and potential solutions</h4>
+        <div class="ps">
+          <div class="ps-row"><div class="ps-p"><b>Signatures are easy to dodge.</b> Changing a model even slightly changes its fingerprint, just as malware authors tweak code to evade antivirus.</div><div class="ps-s">Rely on behavior and workload detection too, like modern antivirus does, and embed watermarks in model weights designed to survive modification. Flag any large <em>unregistered</em> workload, rather than only matching known ones.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>AI is everywhere.</b> Phones, cars, and spell-checkers all run AI.</div><div class="ps-s">Only require registration above a capability or computing-power threshold. Small, everyday AI is exempt.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Privacy.</b> Hardware that watches what your computer runs could become a surveillance tool.</div><div class="ps-s">Chips detect only the type and size of a workload, never its content. Independent auditors check that the hardware does nothing more.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Open-source models.</b> Millions of people run open models on their own machines.</div><div class="ps-s">Set the threshold so typical open models on personal hardware aren't affected, and keep registration free and simple for researchers.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Existing hardware.</b> Millions of chips already in use have no detection built in.</div><div class="ps-s">Start with new data-center chips. The most capable AI needs data-center scale to run, so that's where the risk is concentrated.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Tampering.</b> Determined actors may try to disable the detection.</div><div class="ps-s">Use tamper-resistant secure chips, like the ones that already protect payment and phone security, plus physical audits of data centers.</div></div>
+          <div class="ps-row"><div class="ps-p"><b>Global coordination.</b> One country's rules mean little if chips are made elsewhere.</div><div class="ps-s">Advanced chip-making is concentrated in a handful of companies and countries, which makes international agreements more realistic than for most technologies.</div></div>
+        </div>
+        <p class="prop-q"><b>Open question:</b> How do we keep detection hardware from becoming a tool for controlling ordinary computer users?</p>
+      </article>
+
+      <div class="prop-summary">
+        <h3>How they fit together</h3>
+        <p>Each proposal guards a different stage. <strong>Ratings</strong> shape what AI learns. The <strong>shutdown key</strong> limits what it does when training goes wrong. <strong>No agora</strong> controls how AIs work together. <strong>Reporting</strong> decides what happens when an AI sees wrongdoing. <strong>Detection</strong> catches AI running where it shouldn't. None is enough alone, but layered, each one covers gaps in the others.</p>
+      </div>
+    </section>
+
+    <section id="dilemmas" class="section">
+      <p class="eyebrow">Your turn</p>
+      <h2>Thought experiments</h2>
+      <p>No right answers here. Pick what you think the AI should do, then see how different ethical traditions might see your choice.</p>
+      <div id="dilemmaList" class="dilemmas"></div>
+    </section>
+
+    <section class="section closing">
+      <h2>Where this leaves us</h2>
+      <p>Teaching AI to be ethical turns out to be a mirror. Every hard question about machines (whose values, rules or wisdom, honesty or kindness, obedience or conscience) is a question we've never fully answered about ourselves.</p>
+      <p>Maybe that's the hidden gift in all of this. To build machines that are good, we're being forced to get clearer about what <em>good</em> actually means. And that's a conversation that shouldn't be left to engineers alone. It belongs to everyone.</p>
+    </section>
+
+    <section id="reading" class="section">
+      <h2>Further reading</h2>
+      <ul class="resources">
+        <li><span class="r-title">The Alignment Problem</span><span>Brian Christian, 2020: a readable history of how we try to teach machines human values</span></li>
+        <li><span class="r-title">Human Compatible</span><span>Stuart Russell, 2019: why AI should be uncertain about what we want</span></li>
+        <li><span class="r-title">Superintelligence</span><span>Nick Bostrom, 2014: the case for taking advanced AI risk seriously</span></li>
+        <li><a href="https://arxiv.org/abs/2001.09768" target="_blank" rel="noopener">Artificial Intelligence, Values, and Alignment</a><span>Iason Gabriel, 2020: on the question of whose values</span></li>
+        <li><a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener">Constitutional AI: Harmlessness from AI Feedback</a><span>Bai et al., 2022: training AI from written principles</span></li>
+        <li><span class="r-title">Nicomachean Ethics</span><span>Aristotle: on character, habit, and practical wisdom</span></li>
+        <li><span class="r-title">The Republic, Book II</span><span>Plato: the Ring of Gyges</span></li>
+        <li><span class="r-title">Groundwork of the Metaphysics of Morals</span><span>Immanuel Kant: duty, rules, and why lying is wrong</span></li>
+        <li><span class="r-title">Utilitarianism</span><span>John Stuart Mill: judging actions by their consequences</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Aligned by Design: thinking out loud about AI and ethics.</p>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
